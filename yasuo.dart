@@ -8,6 +8,6 @@ class Yasuo extends Hero {
 
   @override
   void someUniqueShit() {
-    // TODO: implement someUniqueShit
+    print("hasagi!");
   }
 }
