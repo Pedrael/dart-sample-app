@@ -1,0 +1,11 @@
+name: dart_test_app
+version: 1.0.0
+description: >-
+  Learning dart.
+environment:
+  sdk: '>=2.10.0 <3.0.0'
+dependencies:
+
+dev_dependencies:
+  test: '>=1.15.0 <2.0.0'
+  http:

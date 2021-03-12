@@ -2,8 +2,9 @@ import 'hero.dart';
 import 'skill.dart';
 import 'yasuo.dart';
 import 'teemo.dart';
+import 'currency.dart' as currency;
 
-void main() {
+void main(List<String> args) {
   final Hero yasuo = Yasuo(
       "Yasuo",
       Set.from([
@@ -21,10 +22,15 @@ void main() {
         Skill("Shroom", 30)
       ]));
   List<Hero> heroes = [teemo, yasuo];
-  heroes.forEach((hero) {
-    print(hero.getFullInfo());
-    hero.someUniqueShit();
-  });
+
+  for (String arg in args) {
+    currency.getCurrency(currency: arg).then((result) => print(result));
+  }
+
+  // heroes.forEach((hero) {
+  //   print(hero.getFullInfo());
+  //   hero.someUniqueShit();
+  // });
 
   // print(yasuo.getFullInfo());
   // yasuo.getSkills.elementAt(0).setDiscountToCooldown = 0.5;
